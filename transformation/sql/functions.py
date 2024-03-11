@@ -12,9 +12,17 @@ FUNCTION_MAP = {
     'UPPER'  : 'data_migration.transformation.sql.string_functions.upper',
     'LOWER': 'data_migration.transformation.sql.string_functions.lower',
     'LENGTH': 'data_migration.transformation.sql.string_functions.strlen',
-    'RTRIM': 'data_migration.transformation.sql.string_functions.Rtrim',
+    'RTRIM': 'data_migration.transformation.sql.string_functions.rtrim',
     'LTRIM': 'data_migration.transformation.sql.string_functions.ltrim',
     'CONCAT_WS': 'data_migration.transformation.sql.string_functions.concat_ws',
+    'DATE_FORMAT': 'data_migration.transformation.sql.date_functions.date_format',
+    'TO_DATE': 'data_migration.transformation.sql.date_functions.to_date',
+    'TO_TIMESTAMP': 'data_migration.transformation.sql.date_functions.to_timestamp',
+    'DATE_ADD': 'data_migration.transformation.sql.date_functions.date_add',
+    'DATE_SUB': 'data_migration.transformation.sql.date_functions.date_sub',
+    'DATEDIFF': 'data_migration.transformation.sql.date_functions.date_diff',
+    'DATE_PART': 'data_migration.transformation.sql.date_functions.date_part',
+    'FROM_UNIXTIME': 'data_migration.transformation.sql.date_functions.from_unixtime',
 }
 
 def get_function(function):
