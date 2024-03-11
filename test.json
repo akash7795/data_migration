@@ -1,0 +1,68 @@
+{
+    "expressions": [
+        {"type":"column", "value":"published_date"},
+        {
+            "type": "expression",
+            "operator": "date_format",
+            "operands" : [
+                {"type": "column", "value":"published_date"},
+                {"type": "literal", "value":"yyyy/MM/dd HH:mm:ss.SSSS"}
+            ],
+            "output_column_name": "date_format"
+        },
+        {
+            "type": "expression",
+            "operator": "to_date",
+            "operands" : [
+                {"type": "column", "value":"published_date"},
+                {"type": "literal", "value":"yyyy-MM-dd"}
+            ],
+            "output_column_name": "to_date"
+        },
+        {
+            "type": "expression",
+            "operator": "to_timestamp",
+            "operands" : [
+                {"type": "column", "value":"published_date"},
+                {"type": "literal", "value":"yyyy-MM-dd HH:mm:ss"}
+            ],
+            "output_column_name": "to_timestamp"
+        },
+        {
+            "type": "expression",
+            "operator": "date_add",
+            "operands" : [
+                {"type": "column", "value":"published_date"},
+                {"type": "literal", "value":"2"}
+            ],
+            "output_column_name": "date_add"
+        },
+        {
+            "type": "expression",
+            "operator": "date_sub",
+            "operands" : [
+                {"type": "column", "value":"published_date"},
+                {"type": "literal", "value":"2"}
+            ],
+            "output_column_name": "date_sub"
+        },
+        {
+            "type": "expression",
+            "operator": "datediff",
+            "operands" : [
+                {"type": "column", "value":"current_date"},
+                {"type": "column", "value":"published_date"}
+            ],
+            "output_column_name": "date_diff"
+        },
+        {
+            "type": "expression",
+            "operator": "from_unixtime",
+            "operands" : [
+                {"type": "literal", "value":"1255033470"},
+                {"type": "literal", "value":"YYYY/MM/dd HH:mm:ss"}
+            ],
+            "output_column_name": "from_unixtime"
+        }
+    ]
+}
